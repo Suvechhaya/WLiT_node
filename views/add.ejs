@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	</head>
+	<body>
+		<h3><%= title %></h3>
+		<hr>
+		<form method="post" action="addProfile/insert">
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="string" class="form-control" id="name" name="name" placeholder="Enter name">
+			</div>
+			<div class="form-group">
+				<label for="college">College:</label>
+				<input type="string" class="form-control" id="college" name="college" placeholder="Enter college name">
+			</div>
+			<div class="form-group">
+				<label for="course">Course:</label>
+				<input type="string" class="form-control" id="course" name="course" placeholder="Enter course">
+			</div>
+			<div class="form-group">
+				<label for="semester">Semester:</label>
+				<input type="string" class="form-control" id="semester" name="semester" placeholder="Enter semester">
+			</div>
+			<div class="form-group">
+				<label for="phone">Contact No.:</label>
+				<input type="string" class="form-control" id="phone" name="phone" placeholder="Enter contact number">
+			</div>
+			<div class="form-group">
+				<label for="facebook_link">Facebook link:</label>
+				<input type="string" class="form-control" id="facebook_link" name="facebook_link" placeholder="Enter facebook link">
+			</div>
+			<div class="form-group">
+			<label for="photo">Select you photo</label>
+			<input type="file" class="form-control-file" id="photo">
+			</div>
+			<button type="submit" class="btn btn-primary" name="action">Submit</button>
+		</form>
+	</body>
+</html>

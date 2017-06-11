@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	</head>
+	<body>
+		<h1>WLiT Fellows 2017</h1>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>S.N</th>
+					<th>Name</th>
+					<th>College</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% profiles.forEach(function(profile, i) { %>
+				<tr>
+					<td><%= i + 1 %></td>
+					<td><%= profile.name %></td>
+					<td><%= profile.college %></td>
+					<td><a class="btn btn-primary" href="/profile/<%=profile._id%>">View</a>		<a class="btn btn-warning" href="/edit/<%=profile._id%>">Edit</a></td>
+				</tr>
+				<% }) %>
+			</tbody>
+		</table>
+		<a class="btn btn-success" href="/add">Add Fellow</a>
+	</body>
+</html>
