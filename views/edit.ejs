@@ -3,6 +3,7 @@
 	<head>
 		<link rel='stylesheet' href='/stylesheets/style.css' />
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<h3><%= title %></h3>
@@ -41,7 +42,7 @@
 				<input type="file" class="form-control-file" id="photo" name="photo">
 			</div>
 			<button type="submit" class="btn btn-primary">Update</button>
-			<a class="btn btn-danger" href="/editProfile/delete/<%= profile._id %>">Delete</a>
+			<a id="delete" class="btn btn-danger" href="/editProfile/delete/<%= profile._id %>" onclick="deleteFunction()">Delete</a>
 		</form>
 	</body>
 </html>

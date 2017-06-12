@@ -13,7 +13,6 @@ router.get('/delete/:id', function(req, res) {
 
 router.post('/update', function(req,res) {
 	Profile.findOneAndUpdate({_id: req.body._id}, {$set: req.body}, (err,doc) => {
-		console.log('i am hereeeeeeeeeeeee', req.body);
 		if(!err) res.redirect('/')
 	})
 })

@@ -1,11 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose')
 
 const Profile = require('../models/profiles')
 
-mongoose.connect('mongodb://localhost/profile_detail')
-var db = mongoose.collection
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

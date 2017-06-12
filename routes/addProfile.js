@@ -4,10 +4,6 @@ var mongoose = require('mongoose')
 
 const Profile = require('../models/profiles')
 
-// mongoose.connect('mongodb://localhost/profile_detail')
-// var db = mongoose.connection
-
-
 router.post('/insert', function(req, res) {
 	var profile = new Profile(req.body);
 	profile.save(function(err, doc) {
