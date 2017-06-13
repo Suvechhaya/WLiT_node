@@ -25,6 +25,7 @@ router.get('/edit/:id', function(req, res) {
 
 router.get('/profile/:id', function(req, res) {
 	Profile.findOne({ _id: req.params.id }, function(err, profile) {
+		console.log('profile123...........', profile);
 		res.render('profile', {profile});
 		if(err) throw err
 	})

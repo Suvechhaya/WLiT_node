@@ -9,7 +9,7 @@ var profileSchema = mongoose.Schema({
 	semester: String,
 	phone_number: String,
 	facebook_link: String,
-	photo: {type: String, default: "https://world-outreach.com/wp-content/uploads/2014/08/placeholder-profile-male.jpg"},
+	photo: {type: String},
 })
 
 var Profile = module.exports = mongoose.model('Profile', profileSchema)
