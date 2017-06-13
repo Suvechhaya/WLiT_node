@@ -2,12 +2,13 @@
 <html>
 	<head>
 		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel='stylesheet' href='/stylesheets/style1.css' />
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<h3><%= title %></h3>
-		<a href="/"><img src="images/back.png"></a>
+		<!-- <a href="/"><img src="/images/back.png"></a> -->
 		<hr>
 		<form method="post" action="/editProfile/update">
 			<div class="form-group">
@@ -38,8 +39,9 @@
 				<input type="string" class="form-control" id="facebook_link" name="facebook_link" value="<%= profile.facebook_link %>">
 			</div>
 			<div class="form-group">
-				<label for="photo">Select you photo</label>
-				<input type="file" class="form-control-file" id="photo" name="photo">
+				<label for="photo">Your photo:</label>
+				<!-- <input type="file" class="form-control-file" id="photo" name="photo"> -->
+				<div id="userphotoUpdate"><img src="<%= profile.photo %>" alt="default avatar"></div>
 			</div>
 			<button type="submit" class="btn btn-primary">Update</button>
 			<a id="delete" class="btn btn-danger" href="/editProfile/delete/<%= profile._id %>">Delete</a>

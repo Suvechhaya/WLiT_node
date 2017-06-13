@@ -36,7 +36,6 @@ router.post('/insert', upload.single('photo'),function(req, res) {
 		if(err) throw err
 		res.redirect('/');
 	});
-	console.log('profile...,,,,,,,,,', profile);
 })
 
 module.exports = router;
